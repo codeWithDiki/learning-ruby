@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+	# root is for the root url for example codewithdiki.com/
+	# and articles#index is for articles = controller and index is for controller method
+	root "articles#index"
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+	# get is for when someone access /articles on the url it will hit the controller and method
+	get "/articles", to: "articles#index"
+
 end
